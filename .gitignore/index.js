@@ -9,10 +9,13 @@ bot.on("ready", function() {
 
 bot.login(process.env.TOKEN)
 
+client.on('message', message =>
+{
+
 //serverlist
-if(message.content === '.serverlist')
+if(message.content === '/serverlist')
 {
     message.channel.send(client.guilds.map(r => "**" + r.name + `** | **${r.memberCount}** member | **` + r.owner + '**'))
 }
 
-    });
+});
