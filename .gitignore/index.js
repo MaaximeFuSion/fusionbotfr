@@ -13,9 +13,9 @@ client.on('message', message =>
 {
 
 //serverlist
-if(message.content === '.serverlist')
+if(message.content === '.test')
 {
-    message.channel.send(client.guilds.map(r => "**" + r.name + `** | **${r.memberCount}** member | **` + r.owner + '**'))
+    message.channel.sendMessage('Allons au bout des choses... :D');
 }
 
 });
