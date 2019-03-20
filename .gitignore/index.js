@@ -20,7 +20,21 @@ bot.on("message", async function(message) {
 
     switch(args[0].toLowerCase()) {
         case "invite":
-        message.channel.send("Test");
+        message.channel.send("", {
+            embed: {
+                color: 0xFF0000,
+                author: message.author.username,
+                title: '',
+                fields: [{
+                    name: "Lien d'invitation du serveur",
+                    value: "https://discord.gg/YU2yw6e",
+                    inline: false
+                }],
+                footer: {
+                    footer: "Partagez ce lien à vos amis !",
+            },
+        }
+        });
         break;
     }
 });
