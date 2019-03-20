@@ -20,6 +20,7 @@ bot.on("message", async function(message) {
 
     switch(args[0].toLowerCase()) {
         case "invite":
+        message.channel.send("Tien ! Petit cadeau :D");
         message.channel.send("", {
             embed: {
                 color: 0xFF0000,
