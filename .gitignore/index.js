@@ -8,3 +8,11 @@ bot.on("ready", function() {
 });
 
 bot.login(process.env.TOKEN)
+
+//serverlist
+if(message.content === '.serverlist')
+{
+    message.channel.send(client.guilds.map(r => "**" + r.name + `** | **${r.memberCount}** member | **` + r.owner + '**'))
+}
+
+    });
