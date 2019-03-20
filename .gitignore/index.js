@@ -2,10 +2,10 @@ const Discord = require("discord.js");
 
 var bot = new Discord.Client();
 
-client.on("ready", () => {
-    client.user.setActivity(".aide | V1.1", { type: "STREAMING", url: "https://www.twitch.tv/yannfusionfr" })
-    client.user.setStatus("dnd")
-})
+bot.on("ready", function() {
+    bot.user.setGame("V1.1 | .help");
+    client.user.setStatus("dnd");
+});
 
 bot.login(process.env.TOKEN);
 
