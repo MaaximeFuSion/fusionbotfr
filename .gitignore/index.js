@@ -29,18 +29,18 @@ bot.on("message", async function(message) {
                     name: ".invite",
                     value: "Envoie le lien d'invitation du serveur.",
                     inline: false
-                }]
+                }],
                 
                 [{
                     name: "test",
                     value: "Test",
                     inline: false
                 }],
-                fields: [{
+                [{
                     name: ".dev",
                     value: "Vous dit qui à crée ce bot !",
                     inline: false
-                }]
+                }],
         }
         });
         break;
