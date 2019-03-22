@@ -31,19 +31,6 @@ bot.on("message", async function(message) {
                     inline: false
                 }]
         }
-        case "invite":
-        message.channel.send("", {
-            embed: {
-                color: 0xFF0000,
-                author: message.author.username,
-                title: 'Invite :',
-                description: 'Voici le lien d'invitation du serveur :',
-                fields: [{
-                    name: "Voici votre lien :",
-                    value: "https://discord.gg/YU2yw6e",
-                    inline: false
-                }]
-        }
         });
         break;
     }
