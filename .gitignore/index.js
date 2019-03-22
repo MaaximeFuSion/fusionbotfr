@@ -27,20 +27,9 @@ bot.on("message", async function(message) {
                 description: 'Commandes disponibles avec ce bot :',
                 fields: [{
                     name: ".invite",
-                    value: "Envoie le lien d'invitation du serveur.",
+                    value: "Envoie le lien d'invitation du serveur.\n **.dev**\n Test",
                     inline: false
-                }],
-                
-                [{
-                    name: "test",
-                    value: "Test",
-                    inline: false
-                }],
-                [{
-                    name: ".dev",
-                    value: "Vous dit qui à crée ce bot !",
-                    inline: false
-                }],
+                }]
         }
         });
         break;
