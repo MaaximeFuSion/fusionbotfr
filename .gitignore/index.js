@@ -44,16 +44,16 @@ bot.on("message", async function(message) {
     var args = message.content.substring(PREFIX.length).split(" ");
 
     switch(args[0].toLowerCase()) {
-        case "test":
+        case "dev":
         message.channel.send("", {
             embed: {
                 color: 0xFF0000,
                 author: message.author.username,
-                title: 'Test :',
-                description: 'Ceci est un test',
+                title: 'Dev  :',
+                description: 'Développeur FusionMOD / FusionHELP',
                 fields: [{
-                    name: "Voici les commandes disponibles :",
-                    value: "**.invite**\nEnvoie le lien d'invitation du serveur.\n **.dev**\n Vous affichera qui à crée le bot.",
+                    name: "Voici le développeur de... **moi**",
+                    value: "YannFusion#7804",
                     inline: false
                 }]
         }
