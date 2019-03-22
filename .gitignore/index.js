@@ -36,6 +36,31 @@ bot.on("message", async function(message) {
     }
 });
 
+bot.on("message", async function(message) {
+    if (message.author.equals(bot.user)) return;
+
+    if(!message.content.startsWith(PREFIX)) return;
+
+    var args = message.content.substring(PREFIX.length).split(" ");
+
+    switch(args[0].toLowerCase()) {
+        case "test":
+        message.channel.send("", {
+            embed: {
+                color: 0xFF0000,
+                author: message.author.username,
+                title: 'Test :',
+                description: 'Ceci est un test',
+                fields: [{
+                    name: "Voici les commandes disponibles :",
+                    value: "**.invite**\nEnvoie le lien d'invitation du serveur.\n **.dev**\n Vous affichera qui à crée le bot.",
+                    inline: false
+                }]
+        }
+        });
+        break;
+    }
+});
 
 
 bot.login(process.env.TOKEN);
