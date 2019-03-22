@@ -26,8 +26,21 @@ bot.on("message", async function(message) {
                 title: 'Commandes :',
                 description: 'Commandes disponibles avec ce bot :',
                 fields: [{
-                    name: ".invite",
-                    value: "Envoie le lien d'invitation du serveur.\n **.dev**\n Test",
+                    name: "Voici les commandes disponibles :",
+                    value: "**.invite**\nEnvoie le lien d'invitation du serveur.\n **.dev**\n Vous affichera qui à crée le bot.",
+                    inline: false
+                }]
+        }
+        case "invite":
+        message.channel.send("", {
+            embed: {
+                color: 0xFF0000,
+                author: message.author.username,
+                title: 'Invite :',
+                description: 'Voici le lien d'invitation du serveur :',
+                fields: [{
+                    name: "Voici votre lien :",
+                    value: "https://discord.gg/YU2yw6e",
                     inline: false
                 }]
         }
@@ -35,5 +48,7 @@ bot.on("message", async function(message) {
         break;
     }
 });
+
+
 
 bot.login(process.env.TOKEN);
