@@ -114,4 +114,16 @@ bot.on("message", async function(message) {
     }
 });
 
+bot.on('message', function (message){
+  if (message.content === prefixs + "discinv"){
+      var help_embed = new Discord.RichEmbed()
+     .setColor('RANDOM')
+     .setTitle("Lien d'invitation du discord")
+     .addField('Nom du serveur','[Cliquez ici ](https://discord.gg/dPw4rd9)%27)
+     .setFooter("Invitation du discord - MAJ le 25/03/19")
+      message.channel.send(help_embed)
+      console.log("LOG : L'invitation du discord à été envoyer dans " + message.guild.name + "' par " + message.author.username + "");
+    }
+  })
+
 bot.login(process.env.TOKEN);
