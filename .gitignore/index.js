@@ -49,11 +49,11 @@ bot.on("message", async function(message) {
             embed: {
                 color: 0xFF0000,
                 author: message.author.username,
-                title: 'Dev  :',
+                title: 'Dev V1.1.2 :',
                 description: 'Développeur FusionMOD / FusionHELP',
                 fields: [{
-                    name: "Voici le développeur de... **moi**",
-                    value: "YannFusion#7804",
+                    name: "YannFusion (*Fondateur*) & Friandise (*Partenaire & Dev*)",
+                    value: "*Powered By* **FusionOFF**",
                     inline: false
                 }]
         }
@@ -131,7 +131,7 @@ bot.on("message", async function(message) {
                 description: ' ',
                 fields: [{
                     name: "https://discord.gg/dPw4rd9",
-                    value: "*Propulsé par FusionOFFI, Dev by Friandise*",
+                    value: "*Propulsé par FusionOFF, Dev by Friandise*",
                     inline: false
                 }]
         }
