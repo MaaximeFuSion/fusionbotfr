@@ -130,8 +130,8 @@ bot.on("message", async function(message) {
                 title: 'Invitation du discord  :',
                 description: ' ',
                 fields: [{
-                    name: "[Cliquez ici ](https://discord.gg/dPw4rd9)",
-                    value: "*Propulsé par FusionOFFI",
+                    name: "https://discord.gg/dPw4rd9",
+                    value: "*Propulsé par FusionOFFI, Dev by Friandise*",
                     inline: false
                 }]
         }
