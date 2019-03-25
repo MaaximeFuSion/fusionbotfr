@@ -131,7 +131,7 @@ bot.on("message", async function(message) {
                 description: ' ',
                 fields: [{
                     name: "[Cliquez ici ](https://discord.gg/dPw4rd9)",
-                    value: "",
+                    value: "*Propulsé par FusionOFFI",
                     inline: false
                 }]
         }
