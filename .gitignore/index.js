@@ -114,16 +114,31 @@ bot.on("message", async function(message) {
     }
 });
 
-bot.on('message', function (message){
-  if (message.content === prefixs + "discinv"){
-      var help_embed = new Discord.RichEmbed()
-     .setColor('RANDOM');
-     .setTitle("Lien d'invitation du discord");
-     .addField('Nom du serveur','[Cliquez ici ](https://discord.gg/dPw4rd9)%27);
-     .setFooter("Invitation du discord - MAJ le 25/03/19");
-      message.channel.send(help_embed)
-      console.log("LOG : L'invitation du discord à été envoyer dans " + message.guild.name + "' par " + message.author.username + "");
+bot.on("message", async function(message) {
+    if (message.author.equals(bot.user)) return;
+
+    if(!message.content.startsWith(PREFIX)) return;
+
+    var args = message.content.substring(PREFIX.length).split(" ");
+
+    switch(args[0].toLowerCase()) {
+        case "invite":
+        message.channel.send("", {
+            embed: {
+                color: 0xFF0000,
+                author: message.author.username,
+                title: 'Invitation du discord  :',
+                description: ' ',
+                fields: [{
+                    name: "[Cliquez ici ](https://discord.gg/dPw4rd9)",
+                    value: "",
+                    inline: false
+                }]
+        }
+        });
+        break;
     }
-  })
+});
+
 
 bot.login(process.env.TOKEN);
