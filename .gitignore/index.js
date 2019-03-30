@@ -140,5 +140,15 @@ bot.on("message", async function(message) {
     }
 });
 
+bot.on('message', function (message){
+
+  if (message.content === prefixs + "discinv"){
+    var disc_embed = new Discord.RichEmbed()
+     .setColor("RANDOM")
+     .setTitle("En développement !")
+     .setImage(" https://cdn.discordapp.com/attachments/502459000315707393/509313341655613441/rainbow.gif ")
+      message.channel.send(disc_embed).then(msg => msg.delete (10000)) 
+    }
+})
 
 bot.login(process.env.TOKEN);
